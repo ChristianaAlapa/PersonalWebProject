@@ -1,0 +1,25 @@
+body{
+    background-color: pink;
+}
+
+section{
+   padding: 25px;
+}
+
+img{
+    margin-top: 25px;
+}
+
+p{
+    width: 300px;
+}
+
+footer{
+    background: red;
+    display: flex;
+    margin-top: auto;
+}
+
+nav a{
+   padding-right: 25px;
+}
