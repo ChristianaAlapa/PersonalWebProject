@@ -1,25 +1,148 @@
-body{
-    background-color: pink;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-section{
-   padding: 25px;
-}
-
-img{
-    margin-top: 25px;
-}
-
-p{
-    width: 300px;
-}
-
-footer{
-    background: red;
+html, body {
+    height: 100%;
     display: flex;
-    margin-top: auto;
+    flex-direction: column;
 }
 
-nav a{
-   padding-right: 25px;
+
+/* Ensure section takes up the remaining space between nav and footer */
+section {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: lightpink;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #A31D1D;
+    font-weight: bold;
+    border: solid;
+    border-color: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+nav a:hover{
+    background-color: darkred;
+    color: white;
+}
+
+/* Profile Picture and Description */
+
+/*section div, aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 300px;
+    padding: 25px;
+}*/
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 300px; 
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+}
+figure img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    border: solid;
+    border-color: #A31D1D;
+}
+
+figcaption {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #000;
+}
+
+/* Sidebar for Fun Facts */
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    max-width: 40%;
+}
+
+aside h4 {
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin: 0 auto;
+
+}
+
+
+aside ul {
+    list-style-type: none;
+    padding-left: 20px;
+    border: dotted;
+    border-color:#F7A8C4;
+    padding: 24px;
+
+}
+
+aside ul li {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    padding: 24px;
+}
+
+/* Footer Section */
+footer {
+    background-color: lightpink;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; 
+    border: dotted;
+    border-color: #A31D1D;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+footer div p {
+    background-color: #A31D1D;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+footer p{
+    padding-top: 15px;
 }
