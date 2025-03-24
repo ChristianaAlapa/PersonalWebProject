@@ -1,148 +1,151 @@
-* {
+/* LANDING PAGE CSS */
+
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* Ensure section takes up the remaining space between nav and footer */
-section {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-/* Navigation Bar */
-nav {
-    background-color: lightpink;
-    padding: 15px;
-    display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center; 
+    width: 600px;
+    height: 100vh;
+    background-image: url(images/paper.jpeg);
+}
+   
 
+.container{
+    width: 100%;
+    height: auto;
 }
 
-nav a {
-    text-decoration: none;
-    color: #A31D1D;
-    font-weight: bold;
+.myPhoto{
+    position: absolute;
+    top: 50px;
+    padding-left: 115px;
+    width: 190px;
+    height: auto;
+    transform: rotate(-7deg);
+}
+
+.library{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transform: rotate(3deg);
     border: solid;
     border-color: white;
-    border-radius: 10px;
-    padding: 15px;
 }
 
-
-nav a:hover{
-    background-color: darkred;
-    color: white;
-}
-
-/* Profile Picture and Description */
-
-/*section div, aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    max-width: 300px;
-    padding: 25px;
-}*/
-
-.container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    gap: 300px; 
-    padding: 20px;
-    margin: 0 auto;
-}
-
-.profile{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 300px;
-}
-figure img {
-    border-radius: 50%;
+.poopoo{
+    position: absolute;
+    bottom: -15%;
+    right: 50px;
     width: 300px;
-    height: 300px;
+    height: auto;
+    border-radius: 10px;
+    transform: rotate(-3deg);
     border: solid;
-    border-color: #A31D1D;
+    border-color: white;
 }
 
-figcaption {
-    padding-top: 20px;
-    text-align: center;
-    font-size: 1.2em;
-    color: #000;
+.name{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    top: 30%;
+    left: 38%;
+    transition: all 0.3s ease;
 }
 
-/* Sidebar for Fun Facts */
-aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px;
-    max-width: 40%;
+.name:hover {
+    outline: 7px dashed #890620; 
+    padding: 10px;
 }
 
-aside h4 {
-    text-align: left;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    margin: 0 auto;
-
+.quote3{
+    position: absolute;
+    top: 45%;
+    right: 50px;
+    width: 235px;
+    height: auto;
+    border-radius: 10px;
+    transform: rotate(5deg);
 }
 
-
-aside ul {
-    list-style-type: none;
-    padding-left: 20px;
-    border: dotted;
-    border-color:#F7A8C4;
-    padding: 24px;
-
+.quote2{
+    position: absolute;
+    top: 50px;
+    padding-left: 200px;
+    width: 190px;
+    height: auto;
+    transform: rotate(7deg);
+}
+   
+.sonny{
+    position: absolute;
+    top: 55%;
+    left:23%;
+    width: 190px;
+    height: auto;
+    transform: rotate(7deg);
 }
 
-aside ul li {
-    font-size: 1.1em;
-    margin-bottom: 8px;
-    padding: 24px;
+.banner{
+    position: absolute;
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    top: -10%;
+    left: 30%;
 }
 
-/* Footer Section */
-footer {
-    background-color: lightpink;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto; 
-    border: dotted;
-    border-color: #A31D1D;
+.disk1{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    top: 85%;
+    left: 30%;
+    transform: rotate(7deg);
 }
 
-footer div {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+.disk2{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    top: 85%;
+    right: 30%;
+    transform: rotate(-7deg);
 }
 
-footer div p {
-    background-color: #A31D1D;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
+.code{
+    position: absolute;
+    top: 35%;
+    left:23%;
+    width: 190px;
+    height: auto;
+    transform: rotate(4deg);
+}
+.hirono{
+    position: absolute;
+    top: 45%;
+    right: 16%;
+    width: 235px;
+    height: auto;
+    border-radius: 10px;
+    transform: rotate(-5deg);
 }
 
-footer p{
-    padding-top: 15px;
+.click{
+    position: absolute;
+    font-size: 25px;
+    font-family: "Caveat";
+    color: #910404;
+    height: auto;
+    border-radius: 10px;
+    top: 23%;
+    left: 46%;
 }
