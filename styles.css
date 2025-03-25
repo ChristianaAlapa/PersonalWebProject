@@ -4,12 +4,11 @@ body {
     margin: 0;
     padding: 0;
     justify-content: center;
-    align-items: center; 
-    width: 600px;
-    height: 100vh;
-    background-image: url(images/paper.jpeg);
+    align-items: center;
+    background-image: url(images/bg.jpeg);
+    font-family: "Caveat"; 
+    
 }
-   
 
 .container{
     width: 100%;
@@ -19,7 +18,7 @@ body {
 .myPhoto{
     position: absolute;
     top: 50px;
-    padding-left: 115px;
+    padding-left: 100px;
     width: 190px;
     height: auto;
     transform: rotate(-7deg);
@@ -35,6 +34,7 @@ body {
     transform: rotate(3deg);
     border: solid;
     border-color: white;
+    box-shadow: 10px 10px 5px pink;
 }
 
 .poopoo{
@@ -47,6 +47,7 @@ body {
     transform: rotate(-3deg);
     border: solid;
     border-color: white;
+    box-shadow: 10px 10px 5px #890620;
 }
 
 .name{
@@ -89,7 +90,7 @@ body {
     left:23%;
     width: 190px;
     height: auto;
-    transform: rotate(7deg);
+    transform: rotate(-7deg);
 }
 
 .banner{
@@ -148,4 +149,489 @@ body {
     border-radius: 10px;
     top: 23%;
     left: 46%;
+}
+
+
+/* HOME PAGE STYLING */
+a{
+    text-decoration: none;
+  }
+  
+  img{
+    max-width: 100%;
+  }
+  
+  container2{
+    position: fixed;
+    width: 100%;
+    max-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo{
+    width:190px;
+    cursor: pointer;
+    margin: 30px 0;
+    padding-left: 75%;
+    transform: rotate(-5deg);
+  }
+  
+  .lists{
+    flex: 1;
+    text-align: center;
+  }
+  
+  .item{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 25px;
+  }
+  
+  .links{
+    font-family: "Caveat";
+    color: #000;
+    font-size: 30px;
+    padding: 15px;
+  }
+  
+  nav ul li a:hover{
+    background-color: darkred;
+    color: #fff;
+    border-radius: 10px;
+    border-width: 45px;
+  }
+
+ .content {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        gap: 300px; 
+        padding-left: 15%;
+        padding-right: 15%;
+        margin: 0 auto;
+        padding-bottom: 10%;
+  }
+    
+  .profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+
+}
+
+figure img{
+    mix-blend-mode: multiply;
+}
+figcaption {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 25px;
+    width: 500px;
+    color: #000;
+}
+
+
+/* Footer Section */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    padding-right: 25px;
+    padding-left: 25px;
+    text-align: center;
+    margin-top: auto; 
+    border-color: #A31D1D;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+footer div h3 a {
+    background-color: #A31D1D;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+footer p{
+    padding-top: 5px;
+}
+
+/* Sidebar for Fun Facts */
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    max-width: 40%;
+}
+
+aside h2{
+    text-align: left;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    transform: rotate(-5deg);
+    font-size: 75px;
+}
+
+aside ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+aside ul li {
+    font-size: 40px;
+    margin-bottom: 8px;
+    padding: 24px;
+    width: 400px;
+}
+
+
+.funFacts{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    left: 45%;
+    bottom: -1%;
+    transform: rotate(-7deg);
+    padding-right: 25px;
+}
+
+
+/* PAGES OF PASSION STYLINGS */
+
+.hobbyTitle{
+    position: absolute;
+    top: 37%;
+    padding-left: 21%;
+    padding-right: 15%;
+    width: 5%;
+    height: auto;
+    
+}
+
+.activites {
+    display: flex;
+    flex-wrap: wrap;             
+    justify-content: space-between; 
+    width: 50%;     
+    padding-left: 33%;   
+  }
+  
+  .activites img {
+    width: calc(33.33% - 10px);  
+    margin-bottom: 10px;        
+    height: auto;
+    max-width: 100%;
+    box-sizing: border-box;    
+  }
+
+  
+.activites img:nth-child(3){
+    transform: rotate(2deg);
+}
+
+.activites img:nth-of-type(1){
+    transform: rotate(5deg);
+}
+
+.activites img:nth-of-type(6){
+    transform: rotate(7deg);
+}
+
+.activites img:nth-of-type(5){
+    transform: rotate(7deg);
+}
+
+
+.activites img:nth-child(4){
+    transform: rotate(-4deg);
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.photo1:hover, .photo3:hover, .photo5:hover, .photo2:hover, .photo7:hover,.photo6:hover {
+    animation: shake 2s infinite;
+    border: groove;
+  }
+
+  .photo1:hover{
+    border-color: lightpink;
+  }
+
+  .photo3:hover{
+    border-color: orangered;
+  }
+
+  .photo5:hover{
+    border-color: green;
+  }
+
+  .photo2:hover{
+    border-color: darkorchid;
+  }
+
+  .photo7:hover{
+    border-color: lightseagreen;
+  }
+
+  .photo6:hover{
+    border-color: rgb(19, 16, 183);
+  }
+
+
+  /* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Apply floating effect to all images */
+
+ .name{
+    animation: float 2s ease-in-out infinite;
+  }
+
+  .hirono:hover{
+    animation: float 2s ease-in-out infinite;
+  }
+
+ .disk1:hover, .disk2:hover, .quote2:hover{
+    animation: shake 5s infinite;
+  }
+
+  /* other hobbies*/
+
+  .moreContent{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 5%;
+    text-align: center;
+  }
+
+
+.moreContent ul li {
+    font-size: 25px;
+    margin-bottom: 8px;
+    padding: 24px;
+    width: 400px;
+}
+
+
+.moreContent ol li {
+    font-size: 25px;
+    margin-bottom: 8px;
+    padding: 24px;
+    width: 400px;
+}
+
+.moreContent ul li, .moreContent ol li{
+  background-color: white;
+  border: 1px solid #ccc;  
+  padding-left: 15px;
+  margin-bottom: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.moreContent h3{
+  font-size: 35px;
+}
+
+
+.moreContent ul li:hover:nth-last-child(2), .moreContent ol li:hover:nth-last-child(3){
+  background-color: hotpink;
+  color: white;
+}
+
+
+.moreContent ul li:hover:nth-last-child(1), .moreContent ol li:hover:nth-last-child(4){
+  background-color: purple;
+  color: white;
+}
+
+
+.moreContent ul li:hover:nth-last-child(3), .moreContent ol li:hover:nth-last-child(2){
+  background-color: skyblue;
+  color: white;
+}
+
+
+.moreContent ul li:hover:nth-last-child(4), .moreContent ol li:hover:nth-last-child(1){
+  background-color: #910404;
+  color: white;
+}
+
+.moreContent ul li, .moreContent li{
+  animation: float 2s infinite;
+}
+
+.moreContent ul li:hover, .moreContent li:hover{
+  animation: shake 3s infinite;
+}
+
+
+/* PAGES OF PASSION PAGE STYLNGS */
+
+table {
+   padding: 12px;
+   padding-left: 24px;
+   height: 40px;  
+}
+
+
+.names {
+   width: 200px;
+}
+
+
+thead td{
+   font-weight: bold;
+   border-collapse: collapse;
+}
+thead, td{
+  box-shadow: 5px 5px solid #07075a;
+  animation: float 6s infinite;
+}
+
+thead{
+  padding: 15%;
+  font-size: 25px;
+  background-image:url(images/landingbg.jpeg);
+  color: white;
+}
+
+td{
+   border-collapse: collapse;
+   padding: 35px;
+   font-size: 25px;
+   gap: 60%;
+}
+
+tr:nth-child(1):hover{
+  background-color: #07075a;
+  color: white
+}
+
+tr:nth-child(2):hover{
+  background-color: #890620;
+  color: white
+}
+
+tr:nth-child(3):hover{
+  background-color: orange;
+  color: white;
+}
+
+ 
+#resume{
+    width: 300%;
+    max-width: 900px; /* Controls how wide the PDF should be */
+    height: 600px; 
+    border: none; 
+    margin: 0 auto;
+    margin-bottom: 25px;
+    display: block; 
+    box-shadow: 0 4px 8px #000; 
+    border-radius: 8px; 
+}
+
+
+/* EXTRA PHOTOS */
+
+.rocket{
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  width: 175px;
+  height: auto;
+  transform: rotate(-7deg);
+}
+
+
+.heart{
+  position: absolute;
+  top: 55%;
+  left: 2%;
+  width: 190px;
+  height: auto;
+  transform: rotate(-7deg);
+}
+
+.stars{
+  position: absolute;
+  bottom: -15%;
+  right: 50px;
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  transform: rotate(-3deg);
+}
+
+.rocket{
+  animation: shake 2s infinite;
+}
+
+.collage{
+  position: absolute;
+  top: 65px;
+  right: 45px;
+  width: 175px;
+  height: auto;
+  transform: rotate(-7deg);
+}
+
+.snoopy{
+  position: absolute;
+  bottom: -15%;
+  right: 50px;
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  transform: rotate(3deg);
+}
+
+.miffy{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    top: 90%;
+    left: 38%;
+    transition: all 0.3s ease;
 }
