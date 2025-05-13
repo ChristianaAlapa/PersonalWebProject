@@ -28,7 +28,7 @@
           </nav>
         </div>
       </header>
-    
+     
       <!--profile picture and description-->
     <section>
         <div class="content">
@@ -58,8 +58,25 @@
 
         <img src="images/funfacts.png" class="funFacts">
     </section>
-    
 
+<!-- Button to open the deck -->
+<button id="showDeckButton" class="show-deck-btn">Flip Through the Fun!</button>
+<!-- Container for the card deck (hidden initially) -->
+<div id="cardDeck" class="card-deck">
+  <!-- Close button -->
+  <button id="closeDeckButton" class="close-button">&times;</button>
+
+  <div class="card">
+    <img src="images/modeling.PNG" alt="Card 1">
+  </div>
+  <div class="card">
+    <img src="images/girlInRed.HEIC" alt="Card 2">
+  </div>
+  <div class="card">
+    <img src="images/meltyBeads.HEIC" alt="Card 3">
+  </div>
+</div>
+    
     <!--Footer Section-->
     <footer>   
         <div>
@@ -70,6 +87,29 @@
    
     <img src="images/snoopy.png" class="snoopy">
     <img src="images/collage.png" class="collage">
-   
+
+<script>
+  const showDeckButton = document.getElementById("showDeckButton");
+const cardDeck = document.getElementById("cardDeck");
+const closeDeckButton = document.getElementById("closeDeckButton");
+
+if (showDeckButton && cardDeck && closeDeckButton) {
+  showDeckButton.addEventListener("click", () => {
+    cardDeck.style.display = "flex";
+  });
+
+  closeDeckButton.addEventListener("click", (event) => {
+    cardDeck.style.display = "none";
+    event.stopPropagation();
+  });
+
+  window.addEventListener("click", (event) => {
+    if (!cardDeck.contains(event.target) && event.target !== showDeckButton) {
+      cardDeck.style.display = "none";
+    }
+  });
+}
+
+</script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapters Of Growth</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="myscripts.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
@@ -31,7 +32,7 @@
       </header>
 
 
-      <!--Table-->
+      <!--Table
       <table>
         <thead>
             <tr>
@@ -40,7 +41,8 @@
                 <th>Status</th>
                 <th>Description</th>
         </thead>
-            </tr>
+        <tbody id="tableBody"></tbody>
+            
                 <tr>
                     <td>c/o '28</td>
                     <td>McDaniel College</td>
@@ -64,15 +66,100 @@
                     <td>Student (CYB101 Spring Course)</td>
                     <td>CodePath is an educational nonprofit that offers free, career-building courses in technology,
                     focusing on preparing underrepresented students for careers in tech. </td>
-                </tr>
-        
-      </table>
+                </tr> 
+          </table> -->
 
+          <!-- Table -->
+          <table>
+            <thead>
+              <tr>
+                <th data-column="year">Year</th>
+                <th data-column="name">Name</th>
+                <th>Status</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <!-- Rows will be inserted by JavaScript -->
+            </tbody>
+          </table>
+          
 
       <!--Resume PDF Upload-->
-      <iframe id="resume" src="resume.pdf"></iframe>
+      <button id="likeBtn" class="like-button">
+        👍 Like <span id="likeCount">0</span>
+      </button>
+
+      <iframe id="resume" src="images/resume.pdf"></iframe>
 
       <img src="images/miffy.png" class="rocket">
-
+      <script>
+        const educationData = [
+          {
+            year: "c/o '28",
+            name: "McDaniel College",
+            status: "Undergraduate first-year student.",
+            description: "Small liberal arts college, located in Westminster, MD. I am interested in studying Computer Science with a minor in Management."
+          },
+          {
+            year: "2025",
+            name: "ColorStack",
+            status: "ColorStack Member",
+            description: "ColorStack is a nonprofit organization that supports Black and Latinx computer science students by providing resources, mentorship, and a community to succeed in tech."
+          },
+          {
+            year: "2025",
+            name: "CodePath",
+            status: "Student (CYB101 Spring Course)",
+            description: "CodePath is an educational nonprofit that offers free, career-building courses in technology, focusing on preparing underrepresented students for careers in tech."
+          }
+        ];
+      
+        let sortDirection = {
+          year: true,
+          name: true
+        };
+      
+        const tableBody = document.getElementById("tableBody");
+      
+        function renderTable(data) {
+          tableBody.innerHTML = "";
+          data.forEach(entry => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>${entry.year}</td>
+              <td>${entry.name}</td>
+              <td>${entry.status}</td>
+              <td>${entry.description}</td>
+            `;
+            tableBody.appendChild(row);
+          });
+        }
+      
+        function sortTableBy(column) {
+          const direction = sortDirection[column] ? 1 : -1;
+          educationData.sort((a, b) => {
+            const valA = a[column].toLowerCase();
+            const valB = b[column].toLowerCase();
+            return valA.localeCompare(valB) * direction;
+          });
+          sortDirection[column] = !sortDirection[column];
+          renderTable(educationData);
+        }
+      
+        // Initial render
+        renderTable(educationData);
+      
+        // Add click listeners to sortable headers
+        document.querySelectorAll("th[data-column]").forEach(th => {
+          th.style.cursor = "pointer";
+          th.addEventListener("click", () => {
+            const column = th.getAttribute("data-column");
+            sortTableBy(column);
+          });
+        });
+      </script>
+      
+      
 </body>
 </html>

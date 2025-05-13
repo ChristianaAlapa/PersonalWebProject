@@ -33,42 +33,74 @@
       <section class="hobbies">
         <img src="images/hobbies.png" class="hobbyTitle">
         <div class="activites">
-            
-            <img src="images/photo1.png" class="photo1">
-            <img src="images/photo2.png" class="photo2">
-            <img src="images/photo3.png" class="photo3">
-            <img src="images/photo7.png" class="photo7">
-            <img src="images/photo5.png" class="photo5">
-            <img src="images/photo6.png" class="photo6">
+          <img src="images/photo1.png" class="photo1 movable-photo" draggable="false">
+          <img src="images/photo2.png" class="photo2 movable-photo" draggable="false">
+          <img src="images/photo3.png" class="photo3 movable-photo" draggable="false">
+          <img src="images/photo7.png" class="photo7 movable-photo" draggable="false">
+          <img src="images/photo5.png" class="photo5 movable-photo" draggable="false">
+          <img src="images/photo6.png" class="photo6 movable-photo" draggable="false">
         </div>
-
       </section>
 
+      <!-- Modal for enlarged image -->
+  <div id="imageModal" class="image-modal">
+  <span class="close-image-modal">&times;</span>
+  <img class="modal-content" id="modalImage">
+  </div>
+
+
        <!--Ordered and Unordered list of Hobbies and Skills-->
-     <section class="moreContent">
-        <ul>
-            <h3>My Other hobbies/interest:</h3>
-            <li>Thrifting</li>
-            <li>Dancing</li>
-            <li>Watching Anime</li>
-            <li>Playing Roblox</li>
+       <section class="moreContent">
+        <ul class="hobby-list">
+          <h3>My Other hobbies/interest:</h3>
+          <li>Thrifting</li>
+          <li>Dancing</li>
+          <li>Watching Anime</li>
+          <li>Playing Roblox</li>
         </ul>
-       
-        <ol>
-            <h3>Skills</h3>
-            <li>Social Media Management</li>
-            <li>Public Speaking</li>
-            <li>Project Management</li>
-            <li>Customer Serivce</li>
+      
+        <div id="hobbyInfo" class="hobby-info-box"></div>
+      
+        <ol class="skills">
+          <h3>Skills</h3>
+          <li>
+            Social Media Management
+            <div class="progress-container"><div class="progress-bar" data-percent="90"></div></div>
+          </li>
+          <li>
+            Public Speaking
+            <div class="progress-container"><div class="progress-bar" data-percent="80"></div></div>
+          </li>
+          <li>
+            Project Management
+            <div class="progress-container"><div class="progress-bar" data-percent="70"></div></div>
+          </li>
+          <li>
+            Customer Service
+            <div class="progress-container"><div class="progress-bar" data-percent="95"></div></div>
+          </li>
         </ol>
-       
-
-    </section>
-
+      </section>
+      
+    
     <img src="images/heart.png" class="heart">
     <img src="images/rocket.png" class="rocket">
     <img src="images/stars.png" class="stars">
 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {  
+       // Animate skill progress bars
+        const progressBars = document.querySelectorAll(".progress-bar");
+        progressBars.forEach(bar => {
+          const percent = bar.getAttribute("data-percent");
+          setTimeout(() => {
+            bar.style.width = percent + "%";
+          }, 300);
+        });
+      });
+      </script>
+      
+      
 
 </body>
 </html>
